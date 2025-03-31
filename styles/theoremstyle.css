@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height:100vh ;
+    background-image:url("../images/bg.jpg");
+    backdrop-filter: blur(2px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav{
+    background-color:rgb(255, 255, 255);
+    box-shadow: 3px 3px 3px rgba(26, 23, 18, 0.041);
+}
+
+nav ul{
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+    height: 60px;
+    font-weight: bold;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 80px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+}
+
+nav a:hover{
+    background-color:rgb(224, 224, 224);
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+#navigation-logo{
+    height: 100%;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right:0 ;
+    height:100vh;
+    width: 250px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.148);
+    backdrop-filter:blur(10px);
+    box-shadow: -1px 0 10px rgba(125, 107, 107, 0.274);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar a{
+    width: 100%;
+}
+
+#Xicon{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.sidebar{
+    display:none  /* Hide sidebar by default */
+}
+
+.menubutton{
+    display: none;
+}
+
+@media(max-width:600px){
+    .hideOnMobile{
+        display: none;  /* Hide items on mobile */
+    }
+    .menubutton{
+        display:block;  /* Show menu button on mobile */
+    }
+    .sidebar{
+        display: block;  /* Show sidebar on mobile */
+    }
+}
+
+.Aubrey{
+    font-family:"Aubrey";
+}
+
+#ohm{
+    width: 100%;
+}
+
+.container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+    top: 30%;
+    left: 33%;
+    padding-bottom: 30px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Box style with 3D transform */
+.box {
+    width: 250px;
+    height: 250px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+/* Front and Back sides of the box */
+.box .front, .box .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backface-visibility: hidden;  /* Hide back side when flipped */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.box .front {
+    background: url('your-image1.jpg') no-repeat center center / cover;
+}
+
+.box .back {
+    background: url('your-image2.jpg') no-repeat center center / cover;
+    transform: rotateY(180deg);
+}
+
+/* Hover effect - flip the box */
+.box:hover {
+    transform: rotateY(180deg);
+}
+
+.box .front span, .box .back span {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.box .front, .box .back {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

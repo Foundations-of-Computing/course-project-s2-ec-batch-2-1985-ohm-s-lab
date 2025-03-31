@@ -1,0 +1,230 @@
+/* Reset margin and padding for all elements */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling: full height, background effects, and font setup */
+body{
+    background-image: url('../images/cover.jpg');
+    min-height:100vh ;
+    backdrop-filter: blur(2px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navigation bar styling */
+nav{
+    background-color:rgb(255, 255, 255);
+    box-shadow: 3px 3px 3px rgba(26, 23, 18, 0.041);
+}
+
+nav ul{
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: flex-end; /* Aligns items to the right */
+    align-items: center;
+}
+
+nav li{
+    height: 60px;
+    font-weight: bold;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 80px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+}
+
+nav a:hover{
+    background-color:rgb(224, 224, 224);
+}
+
+nav li:first-child{
+    margin-right: auto; /* Pushes first item to the left */
+}
+
+#navigation-logo{
+    height: 100%;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right:0 ;
+    height:100vh;
+    width: 250px;
+    z-index: 1000; /* Makes sidebar overlay other elements */
+    background-color: rgba(255, 255, 255, 0.148);
+    backdrop-filter:blur(10px);
+    box-shadow: -1px 0 10px rgba(125, 107, 107, 0.274);
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar a{
+    width: 100%;
+}
+
+#Xicon{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.sidebar{
+    display:none
+}
+
+.menubutton{
+    display: none;
+}
+
+/* Mobile responsiveness: show menu button and sidebar */
+@media(max-width:600px){
+    .hideOnMobile{
+        display: none; /* Hides elements with hideOnMobile class on mobile */
+    }
+    .menubutton{
+        display:block; /* Shows the menu button */
+    }
+    .sidebar{
+        display: block; /* Shows the sidebar on mobile */
+    }
+}
+
+.title-text{
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    color: white;
+}
+
+/* Styling for images to maintain aspect ratio */
+.image{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.dropbox1, .dropbox2{
+    border: 1px solid;
+    border-left: 0px;
+    border-right: 0px;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    align-items: flex-start;
+}
+
+/* Position adjustments for images inside dropboxes */
+.dropbox1 img{
+    margin-left: -98px;
+}
+.dropbox2 img{
+    margin-left: 148px;
+}
+
+.holdbox{
+    margin: 10px;
+    border: 1px dashed;
+    border-color: maroon;
+}
+
+/* Bulb off image styling */
+.bulboff{
+    height: 100px;
+    width: 100px ;
+    align-self: self-end;
+    margin-left: 50px;
+}
+
+.current-button{
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: rgba(125, 10, 10, 65%);
+    color: azure;
+    width: 120px;
+    height: 40px;
+    border: 2px solid ghostwhite;
+    border-radius: 30px;
+    opacity: 0.5;
+    transition: opacity 0.5s, box-shadow 0.5s;
+    margin-top: 5px;
+    margin-bottom: 4px;
+}
+
+.current-button:hover{
+    box-shadow: 5px 5px 2px rgba(125, 10, 10, 80%);
+    opacity: 1;
+}
+
+#Current{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-left: 10px;
+    color: whitesmoke;
+}
+
+.input-box{
+    border: 2px solid white;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    width: 100px;
+    border-radius: 30px;
+    color: white;
+    background-color:  rgba(125, 10, 10, 65%);
+    margin-left: 10px;
+    padding-left: 10px;
+    transition: opacity 0.5s, box-shadow 0.5s;
+}
+
+input::placeholder {
+    color: white;
+    opacity: 0.8;
+    padding-left: 15px;
+}
+
+input:focus {
+    opacity: 0.8;
+    box-shadow: 5px 5px 5px maroon;
+}
+
+.glass{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+#my-headline {
+    animation: fade-in 2s forwards;
+}
+span,p,div{
+    animation: fade-in 6s forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
